@@ -23,13 +23,17 @@ int numnickels = Integer.parseInt(nickels);
 		// Ask the user how many dimes they have, and convert their answer
 String dimes = JOptionPane.showInputDialog("How many dimes do you have?");
 int numdimes = Integer.parseInt(dimes);
+
 		// Ask the user how many quarters they have, and convert their answer
 String quarters = JOptionPane.showInputDialog("How many quarters do you have?");
 int numquarters = Integer.parseInt(quarters);
 		// Calculate how much money the user has and save it in a double variable 
-
+double moneydime = numdimes*0.1;
+double moneynickel = numnickels*0.05;
+double moneyquarters = numquarters*0.25;
+double money = moneydime + moneynickel + moneyquarters;
 		// Tell the user how much money they have
-
+JOptionPane.showMessageDialog(null, "You have "+ money +" dollars");
 	}
 }
 
