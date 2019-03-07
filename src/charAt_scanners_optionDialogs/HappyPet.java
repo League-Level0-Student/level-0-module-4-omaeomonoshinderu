@@ -5,7 +5,7 @@ public class HappyPet {
 	
 	// 2. Add the following variable to the next line: static int happinessLevel = 0;
 	// this will be used to store the happiness of your pet
-	
+	static int happinessLevel = 0;
 	public static void main(String[] args) {
 		// 1. Ask the user what kind of pet they want to buy, and store their answer in a variable
 String pet = JOptionPane.showInputDialog("What kind of pet do you want");
@@ -14,9 +14,18 @@ String pet = JOptionPane.showInputDialog("What kind of pet do you want");
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task = JOptionPane.showOptionDialog(null, "Question", "Title", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "Button1", "Button2", "Button3" }, null);
-
+			int task = JOptionPane.showOptionDialog(null, "How would you like to make your pet happy?", "happy pet", 0, JOptionPane.INFORMATION_MESSAGE, null,
+					new String[] { "clean", "feed", "walk" }, null);
+                    System.out.println(task);
+                    if (task ==0) {
+                		clean();
+                	}
+                    if (task ==1) {
+                		feed();
+                	}
+                    if (task ==2) {
+                		walk();
+                	}
 			// 5. Use user input to call the appropriate method created in step 4.
 
 			// 6. If you determine the happiness level is large enough, tell the
@@ -27,4 +36,24 @@ String pet = JOptionPane.showInputDialog("What kind of pet do you want");
 	// 4. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
+ static void feed() { 
+	JOptionPane.showMessageDialog(null, "Your pets happinesswas raised to 33.3");
+	}
+ static void clean() { 
+		JOptionPane.showMessageDialog(null, "Your pets happinesswas raised to 33.3");
+		}
+ static void walk() { 
+		JOptionPane.showMessageDialog(null, "Your pets happinesswas raised to 33.4");
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
